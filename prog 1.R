@@ -80,4 +80,18 @@ system.time(
   y2 <-x^2
 )
 
+# distribuição uniforme
+vunif<-runif(300, min=5, max=10) #define the range between 5 and 10
+hist(vunif)
+shapiro.test(vunif)
+
+#distribuição normal
+vnorm <- rnorm(300, mean=10, sd=2) #provide our own mean and standard deviation
+hist(vnorm)
+shapiro.test(vnorm)
+#distribuição poisson
+poisson <- rpois(300, lambda=3)
+hist(poisson)
+shapiro.test(poisson)
+
 
